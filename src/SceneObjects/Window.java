@@ -1,7 +1,5 @@
 package SceneObjects;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.util.Objects;
 
 public class Window extends SceneObject implements Actable {
