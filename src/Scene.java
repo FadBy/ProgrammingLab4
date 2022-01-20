@@ -1,9 +1,9 @@
 public class Scene {
-    private TimeOfDay timeOfDay = TimeOfDay.EVENING;
-    private boolean dangerous = true;
+    private final TimeOfDay timeOfDay = TimeOfDay.EVENING;
+    private final Difficulty difficulty = Difficulty.HARD;
 
-    private EventSystem eventSystem;
-    private ObjectsHolder objHolder;
+    private final EventSystem eventSystem;
+    private final ObjectsHolder objHolder;
 
     public Scene() {
         eventSystem = new EventSystem();
@@ -15,12 +15,12 @@ public class Scene {
         eventSystem.StartAction();
     }
 
-    public TimeOfDay getTimeOfDay() {
+    public TimeOfDay timeOfDay() {
         return timeOfDay;
     }
 
-    public boolean getDangerous() {
-        return dangerous;
+    public Difficulty difficulty() {
+        return difficulty;
     }
 
     public enum TimeOfDay {
@@ -28,5 +28,12 @@ public class Scene {
         MORNING,
         AFTERNOON,
         EVENING
+    }
+
+    public enum Difficulty {
+        EASY,
+        MEDIUM,
+        HARD,
+        INSANE
     }
 }

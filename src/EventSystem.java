@@ -5,7 +5,7 @@ import SceneObjects.Actable;
 import SceneObjects.FallingException;
 
 public class EventSystem {
-    private ArrayList<Actable> actions;
+    private final ArrayList<Actable> actions;
 
     public EventSystem() {
         actions = new ArrayList<>();
@@ -25,7 +25,6 @@ public class EventSystem {
         for (int i = 0; i < count; i++) {
             actions.add(event);
         }
-
     }
 
     public void addNextEvents(ArrayList<Actable> events, int count) {

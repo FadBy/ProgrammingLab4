@@ -13,9 +13,9 @@ public class ObjectsHolder {
     private Street street;
     private Sky sky;
 
+
     public ObjectsHolder() {
         loadObjects();
-
     }
 
     public void loadEvents(EventSystem eventSystem) {
@@ -25,7 +25,13 @@ public class ObjectsHolder {
         eventSystem.addNextEvent(new Actable() {
             @Override
             public void act() {
-                System.out.println("Вечер Смеркается");
+                System.out.println("Вечер смеркается");
+            }
+        }, 1);
+        eventSystem.addNextEvent(new Actable() {
+            @Override
+            public void act() {
+                System.out.println("Парк зеленеет");
             }
         }, 1);
         eventSystem.addNextEvent(street, 4);
@@ -62,6 +68,7 @@ public class ObjectsHolder {
         decors.add(new Decor("Мотоцикл", "Врум-врум"));
         decors.add(new Decor("Цокот копыт", "Цок-цок"));
         decors.add(new Decor("Тарахтение телеги", "Тарах-тарах"));
+        decors.add(new Decor("Тополя", "*Поднимается запах листвы*"));
         windows.add(new Window(true, decors.get(0)));
         windows.add(new Window(true, decors.get(1)));
         windows.add(new Window(true, decors.get(2)));
@@ -74,6 +81,7 @@ public class ObjectsHolder {
         houses.add(new House(3, windowAdder.getDecorInterval(5, 5)));
         houses.add(new House(4, new Window[0]));
         street = new Street(new Decor[]{
+                decors.get(9),
                 decors.get(6),
                 decors.get(7),
                 decors.get(8)
