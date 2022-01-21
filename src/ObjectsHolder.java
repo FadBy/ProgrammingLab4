@@ -19,7 +19,7 @@ public class ObjectsHolder {
     }
 
     public void loadEvents(EventSystem eventSystem) {
-        if (eventSystem == null){
+        if (eventSystem == null) {
             throw new IllegalArgumentException();
         }
         eventSystem.addNextEvent(karlson, 1);

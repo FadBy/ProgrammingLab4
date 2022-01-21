@@ -25,7 +25,7 @@ public class Malish extends SceneObject implements Actable {
 
     public Malish(ArrayList<House> houses) {
         super("Малыш");
-        if (houses == null){
+        if (houses == null) {
             throw new IllegalArgumentException();
         }
         this.houses = houses;
@@ -62,7 +62,7 @@ public class Malish extends SceneObject implements Actable {
     }
 
     private void setCurrentHouse(House house) {
-        if (house == null){
+        if (house == null) {
             throw new IllegalArgumentException();
         }
         currentHouse = house;

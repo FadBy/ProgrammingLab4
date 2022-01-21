@@ -6,7 +6,7 @@ public class Sky extends SceneObject {
 
     public Sky(boolean isBeautiful, Color color) {
         super("Небо");
-        if (color == null){
+        if (color == null) {
             throw new IllegalArgumentException();
         }
         this.isBeautiful = isBeautiful;

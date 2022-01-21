@@ -11,7 +11,7 @@ public class Karlson extends SceneObject implements Actable {
 
     public Karlson(Malish malish) {
         super("Карлсон");
-        if (malish == null){
+        if (malish == null) {
             throw new IllegalArgumentException();
         }
         this.malish = malish;

@@ -22,7 +22,7 @@ public class EventSystem {
     }
 
     public void addNextEvent(Actable event, int count) {
-        if (event == null || count <= 0){
+        if (event == null || count <= 0) {
             throw new IllegalArgumentException();
         }
         for (int i = 0; i < count; i++) {

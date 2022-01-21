@@ -6,7 +6,7 @@ public class Street extends SceneObject implements Actable {
 
     public Street(Decor[] decorOutside) {
         super("Улица");
-        if (decorOutside == null){
+        if (decorOutside == null) {
             throw new IllegalArgumentException();
         }
         this.decorOutside = decorOutside;
