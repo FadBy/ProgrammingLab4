@@ -1,8 +1,8 @@
 package SceneObjects;
 
 public class Sound {
-    private String text;
-    private String source;
+    private final String text;
+    private final String source;
 
     public Sound(String source, String text) {
         this.source = source;

@@ -10,6 +10,9 @@ public class House extends SceneObject implements Building {
 
     public House(int coord, Window[] windows) {
         super("Дом");
+        if (windows == null){
+            throw new IllegalArgumentException();
+        }
         roof = new Roof(AngleType.BIZARRE);
         this.windows = windows;
         this.coord = coord;

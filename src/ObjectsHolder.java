@@ -19,6 +19,9 @@ public class ObjectsHolder {
     }
 
     public void loadEvents(EventSystem eventSystem) {
+        if (eventSystem == null){
+            throw new IllegalArgumentException();
+        }
         eventSystem.addNextEvent(karlson, 1);
         eventSystem.addNextEvent(malish, 1);
         eventSystem.addNextEvent(karlson, 1);
@@ -36,7 +39,7 @@ public class ObjectsHolder {
         }, 1);
         eventSystem.addNextEvent(street, 4);
         eventSystem.addNextEvents(new ArrayList<Actable>(windows), 1);
-        eventSystem.addNextEvent(malish, 5);
+        eventSystem.addNextEvent(malish, 4);
         eventSystem.addNextEvent(karlson, 1);
         eventSystem.addNextEvent(malish, 4);
         eventSystem.addNextEvent(karlson, 1);
@@ -44,7 +47,7 @@ public class ObjectsHolder {
 
     private void loadObjects() {
         class WindowAdder {
-            private ArrayList<Window> windows;
+            private final ArrayList<Window> windows;
 
             public WindowAdder(ArrayList<Window> windows) {
                 this.windows = windows;
